@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-// Import other components as you create them
+import { StudentsComponent } from './students/students.component';
+import { ActivitiesComponent } from './activities/activities.component';
+import { TimeComponent } from './time/time.component';
+import { ReportComponent } from './report/report.component';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
-  // Add additional routes for students, activities, time, report
-  { path: '', redirectTo: '/login', pathMatch: 'full' }
+  { path: 'students', component: StudentsComponent },
+  { path: 'activities', component: ActivitiesComponent },
+  { path: 'time', component: TimeComponent },
+  { path: 'report', component: ReportComponent },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }, // Default route
 ];
 
 @NgModule({
